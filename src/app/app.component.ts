@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Guid } from "guid-typescript";
-import {Todo} from "../models/todo.model";
-import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
 
 @Component({
@@ -14,6 +11,8 @@ export class AppComponent {
   }
 
   title = 'todo-app';
+
+  opened = false;
 
   // todos: Todo[] = [
   //   new Todo(Guid.create(), 'Learn Angular', false),
@@ -45,5 +44,9 @@ export class AppComponent {
 
   goToIndex() {
     this.router.navigate(['']);
+  }
+
+  toggleSidenav() {
+    this.opened = !this.opened;
   }
 }

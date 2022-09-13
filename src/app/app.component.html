@@ -3,6 +3,9 @@
   <nav>
     <div class="nav-wrapper blue">
       <ul id="nav-mobile" class="left">
+        <li>
+          <a (click)="toggleSidenav()">Toggle</a>
+        </li>
         <li><a (click)="goToIndex()">To-Do List</a></li>
         <li><a (click)="goToCompleted()">Completed</a></li>
         <li><a (click)="goToDeleted()">Deleted</a></li>
@@ -10,7 +13,21 @@
     </div>
   </nav>
 
-  <router-outlet> </router-outlet>
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened">
+      <ul>
+        <li><a mat-list-item (click)="goToIndex()">To-Do List</a></li>
+        <li><a mat-list-item (click)="goToCompleted()">Completed</a></li>
+        <li><a mat-list-item (click)="goToDeleted()">Deleted</a></li>
+      </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet> </router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
 
 <!--  <h1>To Do List</h1>-->
 

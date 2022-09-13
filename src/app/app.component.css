@@ -1,0 +1,16 @@
+mat-sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+mat-sidenav {
+  width: 250px;
+  background-color: lightskyblue;
+}
+
+mat-sidenav li {
+  margin: 20px 0 0 10px;
+}
+
+mat-sidenav a {
+  color: white;
+}
