@@ -7,8 +7,11 @@ import {IndexComponent} from "./index/index.component";
 const routes: Routes = [
   { path: 'completed', component: CompletedComponent },
   { path: 'deleted', component: DeletedComponent },
-  { path: '', component: IndexComponent },
+  { path: 'todo', component: IndexComponent },
+  { path: '', redirectTo: '/todo', pathMatch: 'full' },
 ];
+
+//TODO: Add a 404 page
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

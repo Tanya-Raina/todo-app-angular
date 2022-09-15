@@ -14,3 +14,7 @@ mat-sidenav li {
 mat-sidenav a {
   color: white;
 }
+
+mat-sidenav a:hover {
+  cursor: pointer;
+}

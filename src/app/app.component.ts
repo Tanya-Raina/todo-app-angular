@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,6 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private router: Router) {
-  }
-
   title = 'todo-app';
 
   opened = false;
@@ -34,17 +30,6 @@ export class AppComponent {
   //   this.todos = this.todos.filter(todo => todo.id !== id);
   // }
 
-  goToCompleted() {
-    this.router.navigate(['completed']);
-  }
-
-  goToDeleted() {
-    this.router.navigate(['deleted']);
-  }
-
-  goToIndex() {
-    this.router.navigate(['']);
-  }
 
   toggleSidenav() {
     this.opened = !this.opened;
